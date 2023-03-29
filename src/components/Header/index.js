@@ -1,4 +1,6 @@
-function MyHeader() {
+import "./styles.css";
+
+function Header() {
   return (
     <div id="my-header">
       <p>This is my header</p>
@@ -6,4 +8,4 @@ function MyHeader() {
   );
 }
 
-export default MyHeader;
+export default Header;

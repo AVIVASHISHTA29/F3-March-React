@@ -1,15 +1,23 @@
 import "./App.css";
-import MyComponent from "./MyComponent";
-import MyHeader from "./MyHeader";
+
+import { example2 } from "./example";
+import Header from "./components/Header";
+import MyComponent from "./components/MyComponent";
+import Footer from "./components/Footer";
 
 function App() {
   return (
     <div>
-      <MyHeader />
+      <Header />
       <h1>Hello Hi How are you</h1>
       <MyComponent />
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+// Problem ? -> If I have 20 components -> 20 component.js files and 20 styless.css
+
+example2();
