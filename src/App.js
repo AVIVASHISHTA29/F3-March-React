@@ -9,7 +9,6 @@ function App() {
   return (
     <div>
       <Header />
-      <h1>Hello Hi How are you</h1>
       <MyComponent />
       <Footer />
     </div>
