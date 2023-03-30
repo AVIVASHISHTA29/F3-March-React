@@ -1,0 +1,35 @@
+.card {
+  width: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  border: 1px solid #333;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.card-img {
+  height: 3rem;
+  width: 3rem;
+}
+
+.info-div {
+  width: 100%;
+}
+
+.card-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.card-info h3,
+p {
+  margin: 0;
+}
+
+.card-info h3 {
+  text-transform: capitalize;
+}

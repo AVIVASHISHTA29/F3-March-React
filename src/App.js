@@ -1,22 +1,42 @@
 import "./App.css";
-
-import { example2 } from "./example";
-import Header from "./components/Header";
-import MyComponent from "./components/MyComponent";
-import Footer from "./components/Footer";
+import Card from "./components/Card";
+import person from "./assets/person.png";
 
 function App() {
+  const users = [
+    {
+      imgSrc: "https://randomuser.me/api/portraits/men/3.jpg",
+      name: "sam",
+      time: "1680195304820",
+      text: "Good class",
+    },
+    {
+      imgSrc: "https://randomuser.me/api/portraits/men/1.jpg",
+      name: "alex",
+      time: "1670295304820",
+      text: "hey What's up!",
+    },
+    {
+      imgSrc: "https://randomuser.me/api/portraits/men/2.jpg",
+      name: "jane",
+      time: "1680295304820",
+      text: "Gn!",
+    },
+  ];
+
   return (
     <div>
-      <Header />
-      <MyComponent />
-      <Footer />
+      {users.map((item) => (
+        <Card
+          imgSrc={item.imgSrc}
+          name={item.name}
+          time={item.time}
+          text={item.text}
+        />
+      ))}
+      {/* <img src={person} /> */}
     </div>
   );
 }
 
 export default App;
-
-// Problem ? -> If I have 20 components -> 20 component.js files and 20 styless.css
-
-example2();

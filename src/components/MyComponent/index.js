@@ -1,8 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-function MyComponent() {
-  var name = "Avi Vashishta";
+function MyComponent({ name }) {
   var num = 10;
 
   function sayHello() {
@@ -25,7 +24,7 @@ function MyComponent() {
 
   return (
     <div className="component-wrapper">
-      <h1>Hi My Name is {name.length == 3 ? "if" : "else"}</h1>
+      <h1>Hi My Name is {name}</h1>
       <h1>{(num + 10) * 1000}</h1>
       <p style={{ fontWeight: "bold" }}>Styled P tag</p>
       <button
