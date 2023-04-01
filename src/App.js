@@ -24,16 +24,36 @@ function App() {
     },
   ];
 
+  function sayMyName(name) {
+    console.log("Name is " + name);
+  }
+
+  var showTwo = true;
+
   return (
     <div>
-      {users.map((item) => (
+      {/* {users.map((item) => (
         <Card
           imgSrc={item.imgSrc}
           name={item.name}
           time={item.time}
           text={item.text}
+          flag={true}
+          sayMyName={sayMyName}
         />
-      ))}
+      ))} */}
+
+      <h1 style={{ backgroundColor: showTwo ? "orange" : "blue" }}>First</h1>
+      {showTwo ? (
+        <div>
+          <h1>Second</h1>
+          <p>Second says hi</p>
+        </div>
+      ) : (
+        <></>
+      )}
+      <h1 className={showTwo ? "hi" : "bye"}>Third</h1>
+
       {/* <img src={person} /> */}
     </div>
   );

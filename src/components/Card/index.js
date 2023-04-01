@@ -10,11 +10,11 @@ import "./styles.css";
 //   );
 // }
 
-function Card({ imgSrc, name, time, text }) {
+function Card({ imgSrc, name, time, text, sayMyName }) {
   var myDate = new Date(parseInt(time));
   console.log(myDate);
   return (
-    <div className="card">
+    <div className={`card`}>
       <img src={imgSrc} className="card-img" />
       <div className="info-div">
         <div className="card-info">
@@ -30,6 +30,7 @@ function Card({ imgSrc, name, time, text }) {
           </p>
         </div>
         <p>{text ? text : "No Text"}</p>
+        <button onClick={() => sayMyName(name)}>Say My Name</button>
       </div>
     </div>
   );
